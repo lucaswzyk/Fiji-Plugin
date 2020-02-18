@@ -1,0 +1,2 @@
+run("CLIJ Macro Extensions", "cl_device=");
+ext.CLIJ_help("pluginTemplate"); 
