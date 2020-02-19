@@ -22,8 +22,8 @@ import java.util.HashMap;
  * Author: @haesleinhuepf                                  |
  * 12 2018                                                 V
  */
-@Plugin(type = CLIJMacroPlugin.class, name = "CLIJ_pluginTemplate")
-public class PluginTemplate extends AbstractCLIJPlugin implements CLIJMacroPlugin, CLIJOpenCLProcessor, OffersDocumentation {
+@Plugin(type = CLIJMacroPlugin.class, name = "CLIJ_pluginTest")
+public class PluginTest extends AbstractCLIJPlugin implements CLIJMacroPlugin, CLIJOpenCLProcessor, OffersDocumentation {
 
     @Override
     public boolean executeCL() {
@@ -50,7 +50,7 @@ public class PluginTemplate extends AbstractCLIJPlugin implements CLIJMacroPlugi
         lParameters.put("dst", dst);
 
         // todo: The location of the .cl file must be relative to the class specified below:
-        return clij.execute(PluginTemplate.class, "template.cl", "addScalar_" + src.getDimension() + "d", lParameters);
+        return clij.execute(PluginTest.class, "template.cl", "addScalar_" + src.getDimension() + "d", lParameters);
     }
 
     // -----------------------------------------------------------------------------------------------------------------
